@@ -14,14 +14,14 @@ FILM transforms near-duplicate photos into a slow motion footage that look like 
 
 ## Web Demo
 
-Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/johngoad/frame-interpolation)
+Integrated into [Hugging Face Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/johngoad/frame-interpolation)
 
 Try the interpolation model with the replicate web demo at 
 [![Replicate](https://replicate.com/google-research/frame-interpolation/badge)](https://replicate.com/google-research/frame-interpolation)
 
 Try FILM to interpolate between two or more images with the PyTTI-Tools at [![PyTTI-Tools:FILM](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.sandbox.google.com/github/pytti-tools/frame-interpolation/blob/main/PyTTI_Tools_FiLM-colab.ipynb#scrollTo=-7TD7YZJbsy_)
 
-An alternative Colab for running FILM on arbitrarily more images, rather than two, [![FILM-Gdrive](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NuaPPSvUhYafymUf2mEkvhnEtpD5oihs)
+An alternative Colab for running FILM on arbitrarily more input images, not just on two images, [![FILM-Gdrive](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NuaPPSvUhYafymUf2mEkvhnEtpD5oihs)
 
 ## Change Log
 * **Nov 28, 2022**: Upgrade `eval.interpolator_cli` for **high resolution frame interpolation**. `--block_height` and `--block_width` determine the total number of patches (`block_height*block_width`) to subdivide the input images. By default, both arguments are set to 1, and so no subdivision will be done.
@@ -207,7 +207,7 @@ python3 -m training.build_saved_model_cli \
 ```
 
 *   By default, a SavedModel is created when the training loop ends, and it will be saved at
-    `<base_folder>/<label>/<saved_model>`.
+    `<base_folder>/<label>/saved_model`.
 
 ## Evaluation on Benchmarks
 
@@ -259,7 +259,6 @@ appropriately by citing:
   howpublished = {\url{https://github.com/google-research/frame-interpolation}}
 }
 ```
-Contact: Fitsum Reda (fitsum@google.com)
 
 ## Acknowledgments
 
